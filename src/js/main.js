@@ -45,7 +45,7 @@ function creatorCharacterSelectorEl(a, i, c) {
     const s1 = document.createElement('span')
     s1.innerText = data[i]['name'][c]
     const i1 = document.createElement('img')
-    i1.setAttribute('src', `src/assets/Anime/${a}/Tokens/${a}_${data[i]['Tokens'][c]}`)
+    i1.setAttribute('src', `src/assets/Anime/${a}/tokens/${a}_${data[i]['tokens'][c]}`)
 
     d1.appendChild(s1)
     d1.appendChild(i1)
