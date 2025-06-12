@@ -28,7 +28,7 @@ function createSelectWorldEl(a,i) {
     d1.classList.add('select-world')
     const i1 = document.createElement('img')
     i1.setAttribute('alt', `Escolha o anime ${a}`)
-    i1.setAttribute('src', `src/assets/Anime/${a}/WPP/${a}_${data[i]['WPP'][0]}`)
+    i1.setAttribute('src', `src/assets/Anime/${a}/wpp/${a}_${data[i]['wpp'][0]}`)
     const i2 = document.createElement('img')
     i2.setAttribute('alt', a)
     i2.setAttribute('src', `src/assets/Anime/${a}/${a}_logo.png`)
@@ -89,7 +89,7 @@ function changeChar(a, i, c) {
 /* OPERAÇÕES */
 
 for(let index = 0; index < data.length; index++) {
-    const a = data[index]['Anime']
+    const a = data[index]['anime']
     const el = createSelectWorldEl(a, index)
     selectionScene.appendChild(el)
     el.addEventListener('click', () => {
