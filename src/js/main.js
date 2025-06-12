@@ -45,7 +45,7 @@ function creatorCharacterSelectorEl(a, i, c) {
     const s1 = document.createElement('span')
     s1.innerText = data[i]['name'][c]
     const i1 = document.createElement('img')
-    i1.setAttribute("src", `./src/assets/anime/${a}/tokens/${a}_${data[i]['tokens'][c]}`)
+    i1.setAttribute("src", `src/assets/Anime/${a}/tokens/${a}_${data[i]['tokens'][c]}`)
 
     d1.appendChild(s1)
     d1.appendChild(i1)
@@ -65,7 +65,7 @@ function windowViewBg() {
 }
 
 function setContent(a, i, c=0) {
-    contentImg.setAttribute("src", `./src/assets/anime/${a}/${a}_logo.png`)
+    contentImg.setAttribute("src", `src/assets/Anime/${a}/${a}_logo.png`)
     contentH2.innerText = data[i]['name'][c]
     contentP.innerText = data[i]['desc'][c]
 }
@@ -76,7 +76,7 @@ function changeChar(a, i, c) {
     setTimeout(() => {
         contentH2.innerText = data[i]['name'][c]
         contentP.innerText = data[i]['desc'][c]  
-        viewBg.style.background = `url(./src/assets/anime/${a}/wpp/${a}_${data[i]['wpp'][c]})`
+        viewBg.style.background = `url(src/assets/Anime/${a}/wpp/${a}_${data[i]['wpp'][c]})`
         viewBg.style.backgroundSize = 'cover'
         viewBg.style.backgroundPosition = 'center'      
     }, 500);
@@ -89,7 +89,7 @@ function changeChar(a, i, c) {
 /* OPERAÇÕES */
 
 for(let index = 0; index < data.length; index++) {
-    const a = data[index]['anime']
+    const a = data[index]['Anime']
     const el = createSelectWorldEl(a, index)
     selectionScene.appendChild(el)
     el.addEventListener('click', () => {
@@ -98,7 +98,7 @@ for(let index = 0; index < data.length; index++) {
         for(let char = 0; char < data[index]['name'].length; char++) {
             nav.appendChild(creatorCharacterSelectorEl(a, index, char))
         }
-        viewBg.style.background = `url(./src/assets/anime/${a}/wpp/${a}_${data[index]['wpp'][0]})`
+        viewBg.style.background = `url(src/assets/Anime/${a}/wpp/${a}_${data[index]['wpp'][0]})`
         viewBg.style.backgroundSize = 'cover'
         viewBg.style.backgroundPosition = 'center'
         viewBg.style.transform = `translate(0, -${window.innerHeight/50}px)`
