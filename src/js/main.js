@@ -28,10 +28,10 @@ function createSelectWorldEl(a,i) {
     d1.classList.add('select-world')
     const i1 = document.createElement('img')
     i1.setAttribute('alt', `Escolha o anime ${a}`)
-    i1.setAttribute("src", `src/assets/Anime/${a}/wpp/${a}_${data[i]['wpp'][0]}`)
+    i1.setAttribute('src', `src/assets/Anime/${a}/wpp/${a}_${data[i]['wpp'][0]}`)
     const i2 = document.createElement('img')
     i2.setAttribute('alt', a)
-    i2.setAttribute("src", `src/assets/Anime/${a}/${a}_logo.png`)
+    i2.setAttribute('src', `src/assets/Anime/${a}/${a}_logo.png`)
 
     d1.appendChild(i1)
     d1.appendChild(i2)
@@ -45,7 +45,7 @@ function creatorCharacterSelectorEl(a, i, c) {
     const s1 = document.createElement('span')
     s1.innerText = data[i]['name'][c]
     const i1 = document.createElement('img')
-    i1.setAttribute("src", `src/assets/Anime/${a}/tokens/${a}_${data[i]['tokens'][c]}`)
+    i1.setAttribute('src', `src/assets/Anime/${a}/tokens/${a}_${data[i]['tokens'][c]}`)
 
     d1.appendChild(s1)
     d1.appendChild(i1)
@@ -65,7 +65,7 @@ function windowViewBg() {
 }
 
 function setContent(a, i, c=0) {
-    contentImg.setAttribute("src", `src/assets/Anime/${a}/${a}_logo.png`)
+    contentImg.setAttribute('src', `src/assets/Anime/${a}/${a}_logo.png`)
     contentH2.innerText = data[i]['name'][c]
     contentP.innerText = data[i]['desc'][c]
 }
