@@ -76,7 +76,7 @@ function changeChar(a, i, c) {
     setTimeout(() => {
         contentH2.innerText = data[i]['name'][c]
         contentP.innerText = data[i]['desc'][c]  
-        viewBg.style.background = `url(src/assets/Anime/${a}/WPP/${a}_${data[i]['WPP'][c]})`
+        viewBg.style.background = `url(src/assets/Anime/${a}/wpp/${a}_${data[i]['wpp'][c]})`
         viewBg.style.backgroundSize = 'cover'
         viewBg.style.backgroundPosition = 'center'      
     }, 500);
@@ -98,7 +98,7 @@ for(let index = 0; index < data.length; index++) {
         for(let char = 0; char < data[index]['name'].length; char++) {
             nav.appendChild(creatorCharacterSelectorEl(a, index, char))
         }
-        viewBg.style.background = `url(src/assets/Anime/${a}/WPP/${a}_${data[index]['WPP'][0]})`
+        viewBg.style.background = `url(src/assets/Anime/${a}/wpp/${a}_${data[index]['wpp'][0]})`
         viewBg.style.backgroundSize = 'cover'
         viewBg.style.backgroundPosition = 'center'
         viewBg.style.transform = `translate(0, -${window.innerHeight/50}px)`
